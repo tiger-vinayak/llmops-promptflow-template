@@ -1,10 +1,10 @@
 {
-    "azure_managed_endpoint":[
+    "azure_managed_endpoint": [
         {
             "ENV_NAME": "dev",
             "TEST_FILE_PATH": "sample-request.json",
             "ENDPOINT_NAME": "",
-            "ENDPOINT_DESC": "An online endpoint serving a flow for named entity flow",
+            "ENDPOINT_DESC": "An online endpoint serving a flow for gcash prompt flow",
             "DEPLOYMENT_DESC": "prompt flow deployment",
             "PRIOR_DEPLOYMENT_NAME": "",
             "PRIOR_DEPLOYMENT_TRAFFIC_ALLOCATION": "",
@@ -19,12 +19,12 @@
             }
         }
     ],
-    "kubernetes_endpoint":[
+    "kubernetes_endpoint": [
         {
             "ENV_NAME": "dev",
             "TEST_FILE_PATH": "sample-request.json",
             "ENDPOINT_NAME": "",
-            "ENDPOINT_DESC": "An kubernetes endpoint serving a flow for named entity",
+            "ENDPOINT_DESC": "An kubernetes endpoint serving a flow for gcash prompt",
             "DEPLOYMENT_DESC": "prompt flow deployment",
             "PRIOR_DEPLOYMENT_NAME": "",
             "PRIOR_DEPLOYMENT_TRAFFIC_ALLOCATION": "",
@@ -42,11 +42,13 @@
             }
         }
     ],
-    "webapp_endpoint":[
+    "webapp_endpoint": [
         {
             "ENV_NAME": "dev",
             "TEST_FILE_PATH": "sample-request.json",
-            "CONNECTION_NAMES": ["aoai"],
+            "CONNECTION_NAMES": [
+                "aoai"
+            ],
             "REGISTRY_NAME": "",
             "REGISTRY_RG_NAME": "",
             "APP_PLAN_NAME": "",
@@ -54,7 +56,6 @@
             "WEB_APP_RG_NAME": "",
             "WEB_APP_SKU": "B3",
             "USER_MANAGED_ID": ""
-            
         }
     ]
 }

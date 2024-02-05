@@ -1,28 +1,28 @@
 trigger: none
 pr:
   branches:
-   include:
-     - main
-     - development
+    include:
+      - main
+      - development
   paths:
     include:
       - .azure-pipelines/*
       - llmops/*
-      - named_entity_recognition/*
+      - gcash_prompt_flow/*
 
 pool:
   vmImage: ubuntu-latest
 
 variables:
-- group: llmops_platform_dev_vg
+  - group: llmops_platform_dev_vg
 
 parameters:
- - name: env_name
-   displayName: "Execution Environment"
-   default: "pr"
- - name: flow_to_execute
-   displayName: "flow to execute"
-   default: "named_entity_recognition"
+  - name: env_name
+    displayName: "Execution Environment"
+    default: "pr"
+  - name: flow_to_execute
+    displayName: "flow to execute"
+    default: "gcash_prompt_flow"
 
 #=====================================
 # Execute platform_pr_dev_pipeline pipeline for experiment, evaluation and deployment of flows
